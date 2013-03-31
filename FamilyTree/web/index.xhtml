@@ -25,6 +25,20 @@
             </p:panel>
 
             <p:dialog header="confirm" widgetVar="dlg1" width="500">derp</p:dialog>
+                        <p:dataTable value="#{personController.personList}" var="person">
+                <p:column>
+                    <f:facet name="header">Name</f:facet>  
+                    <h:outputText value="#{person.name}"/>
+                </p:column> 
+                <p:column>
+                    <f:facet name="header">Number</f:facet>  
+                    <h:outputText value="#{person.surname}"/>
+                </p:column> 
+                <p:column>
+                    <f:facet name="header">Address</f:facet>  
+                    <h:outputText value="#{person.birth}"/>
+                </p:column> 
+            </p:dataTable>
 
         </h:form>
     </h:body>
