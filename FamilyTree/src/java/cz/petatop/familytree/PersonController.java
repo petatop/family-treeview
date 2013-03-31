@@ -20,6 +20,7 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class PersonController {
     List<Person> personList = new ArrayList<Person>();
+    Person personToAdd;
     /**
      * Creates a new instance of PersonAdder
      */
@@ -28,6 +29,14 @@ public class PersonController {
        personList.add(new Person("Milan","Parek","1943/12/22"));
        personList.add(new Person("Rostislav","Zebrina","1993/01/05")); 
     }
+    
+    public String addPerson(){
+        System.out.println("Inside Action");
+        personList.add(personToAdd);
+        personToAdd = new Person();
+        return "Success";    
+    }
+    
     public List<Person> getPersonList() {
         return personList;
     }

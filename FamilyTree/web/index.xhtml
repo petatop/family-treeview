@@ -12,15 +12,15 @@
             <p:panel header="Add new person">
                 <h:panelGrid columns="2">
                     <h:outputText value="Name" />  
-                    <p:inputText />
+                    <p:inputText value="#{personController.person.name}" />
                     <h:outputText value="Surname" />                      
-                    <p:inputText/>
+                    <p:inputText value="#{personController.person.surname}"/>
                     <h:outputText value="Born" />  
-                    <p:inputText/>
+                    <p:inputText value="#{personController.person.birth}"/>
 
                 </h:panelGrid>
                 <f:facet name="footer">    
-                    <p:commandButton value="Finish"  onclick="dlg1.show();" type="button" />
+                    <p:commandButton value="Finish" action="#{personController.addPerson()}" ajax="false" />
                 </f:facet>
             </p:panel>
 

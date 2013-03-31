@@ -15,6 +15,11 @@ public class Person {
     private String surname;
     private String birth;
     
+
+    public Person(){
+    }
+    
+    
     public Person(String name, String surname, String birth){
         this.name = name;
         this.surname = surname;
