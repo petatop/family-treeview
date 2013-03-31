@@ -1,14 +1,32 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        Hello from Facelets
-        <br />
-        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
+         <h:form>
+            <p:panel header="Add new person">
+                <h:panelGrid columns="2">
+                    <h:outputText value="Name" />  
+                    <p:inputText />
+                    <h:outputText value="Surname" />                      
+                    <p:inputText/>
+                    <h:outputText value="Born" />  
+                    <p:inputText/>
+
+                </h:panelGrid>
+                <f:facet name="footer">    
+                    <p:commandButton value="Finish"  onclick="dlg1.show();" type="button" />
+                </f:facet>
+            </p:panel>
+
+            <p:dialog header="confirm" widgetVar="dlg1" width="500">derp</p:dialog>
+
+        </h:form>
     </h:body>
 </html>
 
