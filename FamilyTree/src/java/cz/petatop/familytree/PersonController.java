@@ -25,6 +25,7 @@ public class PersonController {
      * Creates a new instance of PersonAdder
      */
     public PersonController() {       
+       personToAdd = new Person();
        personList.add(new Person("Jan","Novák","1923/02/02"));
        personList.add(new Person("Milan","Parek","1943/12/22"));
        personList.add(new Person("Rostislav","Zebrina","1993/01/05")); 
