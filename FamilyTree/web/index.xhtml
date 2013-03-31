@@ -12,11 +12,11 @@
             <p:panel header="Add new person">
                 <h:panelGrid columns="2">
                     <h:outputText value="Name" />  
-                    <p:inputText value="#{personController.person.name}" />
+                    <p:inputText value="#{personController.personToAdd.name}" />
                     <h:outputText value="Surname" />                      
-                    <p:inputText value="#{personController.person.surname}"/>
+                    <p:inputText value="#{personController.personToAdd.surname}"/>
                     <h:outputText value="Born" />  
-                    <p:inputText value="#{personController.person.birth}"/>
+                    <p:inputText value="#{personController.personToAdd.birth}"/>
 
                 </h:panelGrid>
                 <f:facet name="footer">    
